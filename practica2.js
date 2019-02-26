@@ -15,7 +15,7 @@ const climatizador = new Climatizador(dormitorio);
 const termostato = new Termostato(dormitorio);
 
 // programador
-const configProgramador = [
+const conf = [
   { hora: "07:00",
     temperatura: 22
   },
@@ -25,11 +25,11 @@ const configProgramador = [
   { hora: "18:00",
     temperatura: 22
   },
-  { hora: "21:14",
-    temperatura: 27
+  { hora: "23:00",
+    temperatura: 20
 }
 ];
-const programador = new Programador(configProgramador);
+const programador = new Programador(conf);
 
 
 

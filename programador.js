@@ -8,16 +8,16 @@ const EventEmitter = require('./events');
 class Programador extends EventEmitter {
 
 
-constructor(config){
+constructor(conf){
 
 super();
 later.date.localTime();
 if (config instanceof Array){
-      for(var i=0; i<config.lenght;i++){
-        var e =config[i];
+      for(var i=0; i<conf.lenght;i++){
+        var h =conf[i];
         //hora -> e.hora
         //temperatura -> e.temperaturaIdeal
-        console.log("Hora"+ e.hora + "temperaturaIdeal")
+        console.log("Hora"+ h.hora + "temperaturaIdeal")
         later.setInterval(
           () => this.emit('ideal', e.temperatura),
           later.parse.text ('at' + e.hora)
